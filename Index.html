@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Solution Galex - Cintas, Cajas, Bolsas y Embalaje en Guatemala</title>
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -135,24 +136,28 @@
             display: flex;
             flex-direction: column;
             justify-content: space-between;
+            text-align: center;
         }
         .product-card:hover {
             transform: translateY(-5px);
         }
-        .product-img {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background-color: #e9ecef;
+        .product-icon {
+            font-size: 3rem;
+            padding: 1.5rem 0 0.5rem 0;
         }
         .product-info {
-            padding: 1.5rem;
+            padding: 1rem 1.5rem 1.5rem 1.5rem;
         }
         .product-title {
-            font-size: 1.2rem;
+            font-size: 1.1rem;
             font-weight: 700;
             margin-bottom: 0.5rem;
             color: var(--primary-blue);
+        }
+        .product-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
         }
         .product-price {
             font-size: 1.1rem;
@@ -258,92 +263,95 @@
 
     <div class="container">
         
+        <!-- APARTADO 1: CINTAS -->
         <h2 class="section-title" id="cintas">1. Cintas de Empaque y Adhesivas</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=500&q=80" alt="Cinta Acrílica" class="product-img">
+                <div class="product-icon">📦</div>
                 <div class="product-info">
                     <div class="product-title">Cinta Acrílica Transparente / Canela</div>
-                    <p>Medida: 2" x 100m. Alta adherencia.</p>
+                    <div class="product-desc">Medida: 2" x 100m. Alta adherencia industrial.</div>
                     <div class="product-price">Q18.00 c/u</div>
                 </div>
                 <button onclick="agregarAlCarro('Cinta Acrílica 2x100m', 18)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=500&q=80" alt="Cinta HotMelt" class="product-img">
+                <div class="product-icon">🛡️</div>
                 <div class="product-info">
                     <div class="product-title">Cinta HotMelt Industrial Paken</div>
-                    <p>Adhesivo de alto rendimiento para cajas pesadas.</p>
+                    <div class="product-desc">Adhesivo de alto rendimiento para cajas pesadas.</div>
                     <div class="product-price">Q22.00 c/u</div>
                 </div>
                 <button onclick="agregarAlCarro('Cinta HotMelt Industrial', 22)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=500&q=80" alt="Cinta Impresa" class="product-img">
+                <div class="product-icon">🏷️</div>
                 <div class="product-info">
                     <div class="product-title">Cinta Impresa Solution Galex</div>
-                    <p>Personalizada para seguridad de tu marca.</p>
+                    <div class="product-desc">Personalizada para seguridad y prestigio de tu marca.</div>
                     <div class="product-price">Q24.00 c/u</div>
                 </div>
                 <button onclick="agregarAlCarro('Cinta Impresa', 24)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=500&q=80" alt="Masking Tape" class="product-img">
+                <div class="product-icon">🛠️</div>
                 <div class="product-info">
                     <div class="product-title">Masking Tape 2"</div>
-                    <p>Ideal para enmascarado y fijación general.</p>
+                    <div class="product-desc">Ideal para enmascarado y fijación general.</div>
                     <div class="product-price">Q20.00 c/u</div>
                 </div>
                 <button onclick="agregarAlCarro('Masking Tape 2"', 20)">Agregar al Carrito</button>
             </div>
         </div>
 
+        <!-- APARTADO 2: EMBALAJE GENERAL -->
         <h2 class="section-title" id="embalaje">2. Embalaje General e Insumos</h2>
         <div class="products-grid">
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=500&q=80" alt="Cajas de Cartón" class="product-img">
+                <div class="product-icon">📦</div>
                 <div class="product-info">
                     <div class="product-title">Cajas de Cartón Estándar</div>
-                    <p>Resistentes para e-commerce y envíos.</p>
+                    <div class="product-desc">Resistentes para e-commerce y envíos seguros.</div>
                     <div class="product-price">Q7.00 c/u</div>
                 </div>
                 <button onclick="agregarAlCarro('Caja de Cartón Estándar', 7)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=500&q=80" alt="Tiras Cross" class="product-img">
+                <div class="product-icon">🔗</div>
                 <div class="product-info">
                     <div class="product-title">Rollos de Tiras Cross / Sunchado</div>
-                    <p>Máxima seguridad y sujeción para carga pesada.</p>
+                    <div class="product-desc">Máxima seguridad y sujeción para carga pesada.</div>
                     <div class="product-price">Q165.00 rollo</div>
                 </div>
                 <button onclick="agregarAlCarro('Tiras Cross / Sunchado', 165)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=500&q=80" alt="Etiquetas" class="product-img">
+                <div class="product-icon">🖨️</div>
                 <div class="product-info">
                     <div class="product-title">Etiquetas Térmicas (Código de Barras)</div>
-                    <p>Rollo compatible 4" x 2" de alta definición.</p>
+                    <div class="product-desc">Rollo compatible 4" x 2" de alta definición.</div>
                     <div class="product-price">Q55.00 rollo</div>
                 </div>
                 <button onclick="agregarAlCarro('Etiquetas Térmicas 4x2', 55)">Agregar al Carrito</button>
             </div>
 
             <div class="product-card">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=500&q=80" alt="Bolsas Transparentes" class="product-img">
+                <div class="product-icon">🛍️</div>
                 <div class="product-info">
                     <div class="product-title">Bolsas Transparentes con Adhesivo</div>
-                    <p>Paquete de 100 unidades de alta claridad.</p>
+                    <div class="product-desc">Paquete de 100 unidades de alta claridad.</div>
                     <div class="product-price">Q35.00 pack</div>
                 </div>
                 <button onclick="agregarAlCarro('Bolsas Transparentes (Paq. 100)', 35)">Agregar al Carrito</button>
             </div>
         </div>
 
+        <!-- Sección de Carrito -->
         <div class="cart-section" id="carrito">
             <h3>Carrito de Compras</h3>
             <ul id="lista-carrito" style="margin-bottom: 1rem; padding-left: 20px;">
@@ -355,9 +363,11 @@
         </div>
     </div>
 
+    <!-- Sección Contacto y Mapa -->
     <div class="container">
         <div class="contact-section" id="contacto">
             <h2 class="section-title" style="margin-top:0;">CONTÁCTANOS</h2>
+            <!-- Mapa simulado de ubicación en Zona 7 San Miguel Petapa -->
             <div style="width: 100%; height: 300px; background: #e0e0e0; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
                 <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.35987!2d-90.54!3d14.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMyJzAwLjAiTiA5MMKwMzInMjQuMCJX!5e0!3m2!1ses!2sgt!4v1600000000000!5m2!1ses!2sgt"></iframe>
             </div>
