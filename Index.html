@@ -161,19 +161,32 @@
             z-index: 10;
             letter-spacing: 0.5px;
         }
+        /* Contenedor con aspecto de rollo o vector industrial limpio */
         .image-container {
             width: 100%;
-            height: 200px;
+            height: 180px;
             background-color: #e4e7eb;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
+            position: relative;
         }
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
+        .tape-roll-graphic {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #d4a373 0%, #b08968 100%);
+            border: 12px solid #8c6d53;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .tape-roll-inner {
+            width: 35px;
+            height: 35px;
+            background-color: #e4e7eb;
+            border-radius: 50%;
         }
         .product-info {
             padding: 1.25rem;
@@ -313,7 +326,7 @@
             <div class="product-card">
                 <span class="card-badge">Empaque</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?auto=format&fit=crop&w=600&q=80" alt="Cinta Acrílica" class="product-img">
+                    <div class="tape-roll-graphic"><div class="tape-roll-inner"></div></div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Cinta Acrílica Transparente / Canela</div>
@@ -328,7 +341,7 @@
             <div class="product-card">
                 <span class="card-badge">Industrial</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=600&q=80" alt="Cinta HotMelt" class="product-img">
+                    <div class="tape-roll-graphic" style="background: linear-gradient(135deg, #e9edc9 0%, #ccd5ae 100%); border-color: #94d2bd;"><div class="tape-roll-inner"></div></div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Cinta HotMelt Industrial Paken</div>
@@ -343,7 +356,7 @@
             <div class="product-card">
                 <span class="card-badge">Personalizada</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=600&q=80" alt="Cinta Impresa" class="product-img">
+                    <div class="tape-roll-graphic" style="background: linear-gradient(135deg, #adb5bd 0%, #6c757d 100%); border-color: #343a40;"><div class="tape-roll-inner"></div></div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Cinta Impresa Solution Galex</div>
@@ -358,7 +371,7 @@
             <div class="product-card">
                 <span class="card-badge">Adhesiva</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1607344645866-009c320c5ab8?auto=format&fit=crop&w=600&q=80" alt="Masking Tape" class="product-img">
+                    <div class="tape-roll-graphic" style="background: linear-gradient(135deg, #f4f1de 0%, #e0d6b5 100%); border-color: #b5a48b;"><div class="tape-roll-inner"></div></div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Masking Tape</div>
@@ -379,7 +392,7 @@
             <div class="product-card">
                 <span class="card-badge">Cajas</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80" alt="Cajas de Cartón" class="product-img">
+                    <div style="font-size: 3.5rem;">📦</div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Cajas de Cartón Estándar</div>
@@ -394,7 +407,7 @@
             <div class="product-card">
                 <span class="card-badge">Sujeción</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Tiras Cross" class="product-img">
+                    <div style="font-size: 3.5rem;">🔗</div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Rollos de Tiras Cross / Sunchado</div>
@@ -409,7 +422,7 @@
             <div class="product-card">
                 <span class="card-badge">Logística</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?auto=format&fit=crop&w=600&q=80" alt="Etiquetas" class="product-img">
+                    <div style="font-size: 3.5rem;">🖨️</div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Etiquetas Térmicas</div>
@@ -424,7 +437,7 @@
             <div class="product-card">
                 <span class="card-badge">Protección</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Bolsas Transparentes" class="product-img">
+                    <div style="font-size: 3.5rem;">🛍️</div>
                 </div>
                 <div class="product-info">
                     <div class="product-title">Bolsas Transparentes con Adhesivo</div>
