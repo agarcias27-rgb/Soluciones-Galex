@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Solution Galex: cintas, cajas, bolsas y embalaje industrial en Guatemala. Envíos a todo el país.">
     <title>Solution Galex - Cintas, Cajas, Bolsas y Embalaje en Guatemala</title>
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
@@ -13,280 +13,87 @@
             --light-bg: #f8f9fa;
             --text-dark: #333333;
         }
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Inter', sans-serif;
-        }
-        body {
-            background-color: var(--light-bg);
-            color: var(--text-dark);
-            line-height: 1.6;
-        }
-        /* Header */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Inter', sans-serif; }
+        body { background-color: var(--light-bg); color: var(--text-dark); line-height: 1.6; }
         header {
-            background-color: var(--primary-blue);
-            color: white;
-            padding: 1rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 4px solid var(--primary-green);
+            background-color: var(--primary-blue); color: white; padding: 1rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
+            border-bottom: 4px solid var(--primary-green); flex-wrap: wrap;
         }
-        .logo-area h1 {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        .logo-area span {
-            color: var(--primary-green);
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin-left: 20px;
-            font-weight: 600;
-        }
-        nav a:hover {
-            color: var(--primary-green);
-        }
-        /* Animaciones */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        .logo-area h1 { font-size: 1.5rem; font-weight: 700; }
+        .logo-area span { color: var(--primary-green); }
+        nav a { color: white; text-decoration: none; margin-left: 20px; font-weight: 600; }
+        nav a:hover { color: var(--primary-green); }
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
         @keyframes pulseWhatsapp {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
-            }
-            70% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
-        .animate-fade {
-            animation: fadeInUp 0.8s ease-out forwards;
-        }
-        /* Hero Section */
+        .animate-fade { animation: fadeInUp 0.8s ease-out forwards; }
         .hero {
             background: linear-gradient(rgba(11, 31, 54, 0.85), rgba(11, 31, 54, 0.85)), url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=1200&q=80');
-            background-size: cover;
-            background-position: center;
-            color: white;
-            text-align: center;
-            padding: 5rem 2rem;
+            background-size: cover; background-position: center; color: white; text-align: center; padding: 5rem 2rem;
         }
-        .hero h2 {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-        }
+        .hero h2 { font-size: 2.5rem; margin-bottom: 1rem; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
         .btn {
-            background-color: var(--primary-green);
-            color: white;
-            padding: 0.75rem 1.5rem;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            font-weight: 700;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-block;
+            background-color: var(--primary-green); color: white; padding: 0.75rem 1.5rem; border: none;
+            border-radius: 5px; font-size: 1rem; font-weight: 700; cursor: pointer; text-decoration: none; display: inline-block;
         }
-        .btn:hover {
-            background-color: #218838;
-        }
-        /* Container & Products */
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 1rem;
-        }
-        .section-title {
-            text-align: center;
-            margin: 2rem 0 0.5rem 0;
-            font-size: 2rem;
-            color: var(--primary-blue);
-        }
-        .section-subtitle {
-            text-align: center;
-            color: #666;
-            margin-bottom: 2rem;
-            font-size: 1rem;
-        }
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 2rem;
-        }
+        .btn:hover { background-color: #218838; }
+        .container { max-width: 1200px; margin: 2rem auto; padding: 0 1rem; }
+        .section-title { text-align: center; margin: 2rem 0 0.5rem 0; font-size: 2rem; color: var(--primary-blue); }
+        .section-subtitle { text-align: center; color: #666; margin-bottom: 2rem; font-size: 1rem; }
+        .products-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; }
         .product-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            transition: transform 0.3s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            position: relative;
-            border: 1px solid #eaeaea;
+            background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+            transition: transform 0.3s; display: flex; flex-direction: column; justify-content: space-between;
+            position: relative; border: 1px solid #eaeaea;
         }
-        .product-card:hover {
-            transform: translateY(-5px);
-        }
+        .product-card:hover { transform: translateY(-5px); }
         .card-badge {
-            position: absolute;
-            top: 15px;
-            left: 15px;
-            background-color: #212529;
-            color: white;
-            font-size: 0.75rem;
-            font-weight: 600;
-            padding: 4px 10px;
-            border-radius: 20px;
-            z-index: 10;
-            letter-spacing: 0.5px;
+            position: absolute; top: 15px; left: 15px; background-color: #212529; color: white; font-size: 0.75rem;
+            font-weight: 600; padding: 4px 10px; border-radius: 20px; z-index: 10; letter-spacing: 0.5px;
         }
-        .image-container {
-            width: 100%;
-            height: 220px;
-            background-color: #e5e7eb;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            overflow: hidden;
-        }
-        .product-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            mix-blend-mode: multiply;
-        }
-        .product-info {
-            padding: 1.25rem;
-        }
-        .product-title {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 0.25rem;
-            color: var(--primary-blue);
-        }
-        .product-measure {
-            font-size: 0.85rem;
-            color: #555;
-            font-weight: 600;
-            margin-bottom: 0.75rem;
-        }
-        .product-desc {
-            font-size: 0.85rem;
-            color: #666;
-            margin-bottom: 1rem;
-            line-height: 1.4;
-        }
-        .product-price {
-            font-size: 1.15rem;
-            color: var(--primary-green);
-            font-weight: bold;
-            margin-bottom: 1rem;
-        }
+        .image-container { width: 100%; height: 220px; background-color: #e5e7eb; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+        .product-img { width: 100%; height: 100%; object-fit: cover; }
+        .product-info { padding: 1.25rem; }
+        .product-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 0.25rem; color: var(--primary-blue); }
+        .product-measure { font-size: 0.85rem; color: #555; font-weight: 600; margin-bottom: 0.75rem; }
+        .product-desc { font-size: 0.85rem; color: #666; margin-bottom: 1rem; line-height: 1.4; }
+        .product-price { font-size: 1.15rem; color: var(--primary-green); font-weight: bold; margin-bottom: 1rem; }
         .product-card button {
-            width: 100%;
-            background-color: #1e293b;
-            color: white;
-            border: none;
-            padding: 0.75rem;
-            font-weight: 600;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: background 0.2s;
+            width: 100%; background-color: #1e293b; color: white; border: none; padding: 0.75rem;
+            font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background 0.2s;
         }
-        .product-card button:hover {
-            background-color: var(--primary-green);
-        }
-        /* Cart Widget */
-        .cart-section {
-            background: white;
-            margin-top: 3rem;
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #eaeaea;
-        }
-        .cart-section h3 {
-            margin-bottom: 1rem;
-            color: var(--primary-blue);
-        }
-        /* Contacto & Mapa */
-        .contact-section {
-            background: white;
-            padding: 3rem 2rem;
-            margin-top: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.08);
-            border: 1px solid #eaeaea;
-        }
-        .contact-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 2rem;
-            margin-top: 2rem;
-        }
+        .product-card button:hover { background-color: var(--primary-green); }
+        .cart-section { background: white; margin-top: 3rem; padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #eaeaea; }
+        .cart-section h3 { margin-bottom: 1rem; color: var(--primary-blue); }
+        .cart-item { display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 0; border-bottom: 1px solid #eee; }
+        .cart-item button { background: #dc3545; color: white; border: none; border-radius: 4px; padding: 0.3rem 0.6rem; cursor: pointer; font-size: 0.8rem; }
+        .cart-item button:hover { background: #b02a37; }
+        .contact-section { background: white; padding: 3rem 2rem; margin-top: 3rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.08); border: 1px solid #eaeaea; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-top: 2rem; }
         @media (max-width: 768px) {
             .contact-grid { grid-template-columns: 1fr; }
+            nav { width: 100%; margin-top: 0.75rem; display: flex; justify-content: space-between; }
+            nav a { margin-left: 0; }
         }
-        .form-group {
-            margin-bottom: 1rem;
-        }
-        .form-group input, .form-group textarea {
-            width: 100%;
-            padding: 0.75rem;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        /* Footer */
-        footer {
-            background-color: var(--primary-blue);
-            color: white;
-            text-align: center;
-            padding: 2rem;
-            margin-top: 3rem;
-        }
-        /* WhatsApp Floating Button con Pulso */
+        .form-group { margin-bottom: 1rem; }
+        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; font-family: 'Inter', sans-serif; }
+        footer { background-color: var(--primary-blue); color: white; text-align: center; padding: 2rem; margin-top: 3rem; }
         .whatsapp-float {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366;
-            color: white;
-            padding: 15px 20px;
-            border-radius: 50px;
-            font-weight: bold;
-            text-decoration: none;
-            z-index: 1000;
-            animation: pulseWhatsapp 2s infinite;
+            position: fixed; bottom: 20px; right: 20px; background-color: #25d366; color: white; padding: 15px 20px;
+            border-radius: 50px; font-weight: bold; text-decoration: none; z-index: 1000; animation: pulseWhatsapp 2s infinite;
         }
+        .form-status { margin-top: 1rem; font-weight: 600; }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-area">
-            <h1>SOLUTION <span>GALEX</span></h1>
-        </div>
+        <div class="logo-area"><h1>SOLUTION <span>GALEX</span></h1></div>
         <nav>
             <a href="#cintas">Cintas</a>
             <a href="#embalaje">Embalaje</a>
@@ -299,18 +106,16 @@
         <div class="animate-fade">
             <h2>Soluciones Integrales de Embalaje</h2>
             <p>Cajas, Tiras Cross, Etiquetas y Tapes en Guatemala. ¡Envíos a todo el país!</p>
-            <a href="https://wa.me/50247399246?text=Hola,%20necesito%20cotizar%20productos%20de%20embalaje" class="btn" target="_blank">Cotizar por WhatsApp</a>
+            <a href="https://wa.me/50247399246?text=Hola%2C%20necesito%20cotizar%20productos%20de%20embalaje" class="btn" target="_blank">Cotizar por WhatsApp</a>
         </div>
     </section>
 
     <div class="container">
-        
-        <!-- APARTADO 1: CINTAS -->
+
         <h2 class="section-title" id="cintas">1. Cintas de Empaque y Adhesivas</h2>
         <p class="section-subtitle">Cintas de empaque y adhesivas de grado industrial.</p>
-        
+
         <div class="products-grid">
-            <!-- Producto 1 -->
             <div class="product-card">
                 <span class="card-badge">Empaque</span>
                 <div class="image-container">
@@ -325,7 +130,6 @@
                 <button onclick="agregarAlCarro('Cinta Acrílica 2x100m', 18)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 2 -->
             <div class="product-card">
                 <span class="card-badge">Industrial</span>
                 <div class="image-container">
@@ -340,7 +144,6 @@
                 <button onclick="agregarAlCarro('Cinta HotMelt Industrial', 22)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 3 -->
             <div class="product-card">
                 <span class="card-badge">Personalizada</span>
                 <div class="image-container">
@@ -355,7 +158,6 @@
                 <button onclick="agregarAlCarro('Cinta Impresa', 24)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 4 -->
             <div class="product-card">
                 <span class="card-badge">Adhesiva</span>
                 <div class="image-container">
@@ -367,20 +169,18 @@
                     <div class="product-desc">Cinta de papel crepé para enmascarado, pintura y usos multipropósito.</div>
                     <div class="product-price">Q20.00 <span style="font-size: 0.85rem; font-weight: normal; color: #666;">/ c/u</span></div>
                 </div>
-                <button onclick="agregarAlCarro('Masking Tape 2"', 20)">+ Agregar al carrito</button>
+                <button onclick="agregarAlCarro('Masking Tape 2\"', 20)">+ Agregar al carrito</button>
             </div>
         </div>
 
-        <!-- APARTADO 2: EMBALAJE GENERAL -->
         <h2 class="section-title" id="embalaje" style="margin-top: 4rem;">2. Embalaje General e Insumos</h2>
         <p class="section-subtitle">Soluciones complementarias para despacho y logística.</p>
 
         <div class="products-grid">
-            <!-- Producto 5 -->
             <div class="product-card">
                 <span class="card-badge">Cajas</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=600&q=80" alt="Cajas de Cartón" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1607166452427-7e4477079cb9?auto=format&fit=crop&w=600&q=80" alt="Cajas de Cartón" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Cajas de Cartón Estándar</div>
@@ -391,11 +191,10 @@
                 <button onclick="agregarAlCarro('Caja de Cartón Estándar', 7)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 6 -->
             <div class="product-card">
                 <span class="card-badge">Sujeción</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" alt="Tiras Cross" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1611284446314-60a58ac0deb9?auto=format&fit=crop&w=600&q=80" alt="Tiras Cross / Sunchado" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Rollos de Tiras Cross / Sunchado</div>
@@ -406,11 +205,10 @@
                 <button onclick="agregarAlCarro('Tiras Cross / Sunchado', 165)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 7 -->
             <div class="product-card">
                 <span class="card-badge">Logística</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1586864387967-d02ef85d93e8?auto=format&fit=crop&w=600&q=80" alt="Etiquetas" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1580927752452-89d86ea6c25e?auto=format&fit=crop&w=600&q=80" alt="Etiquetas Térmicas" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Etiquetas Térmicas</div>
@@ -421,11 +219,10 @@
                 <button onclick="agregarAlCarro('Etiquetas Térmicas 4x2', 55)">+ Agregar al carrito</button>
             </div>
 
-            <!-- Producto 8 -->
             <div class="product-card">
                 <span class="card-badge">Protección</span>
                 <div class="image-container">
-                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Bolsas Transparentes" class="product-img">
+                    <img src="https://images.unsplash.com/photo-1615486364966-de9afdb3d7e9?auto=format&fit=crop&w=600&q=80" alt="Bolsas Transparentes" class="product-img">
                 </div>
                 <div class="product-info">
                     <div class="product-title">Bolsas Transparentes con Adhesivo</div>
@@ -437,34 +234,36 @@
             </div>
         </div>
 
-        <!-- Sección de Carrito -->
         <div class="cart-section" id="carrito">
             <h3>Carrito de Compras</h3>
-            <ul id="lista-carrito" style="margin-bottom: 1rem; padding-left: 20px;">
-                <li>El carrito está vacío.</li>
-            </ul>
-            <p><strong>Total: Q<span id="total-carrito">0.00</span></strong></p>
+            <div id="lista-carrito"><p>El carrito está vacío.</p></div>
+            <p style="margin-top:1rem;"><strong>Total: Q<span id="total-carrito">0.00</span></strong></p>
             <br>
             <button class="btn" onclick="finalizarCompra()">Finalizar Pedido (WhatsApp / Transferencia)</button>
         </div>
     </div>
 
-    <!-- Sección Contacto y Mapa -->
     <div class="container">
         <div class="contact-section" id="contacto">
             <h2 class="section-title" style="margin-top:0;">CONTÁCTANOS</h2>
             <div style="width: 100%; height: 300px; background: #e0e0e0; border-radius: 8px; overflow: hidden; margin-bottom: 2rem;">
-                <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3863.35987!2d-90.54!3d14.53!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDMyJzAwLjAiTiA5MMKwMzInMjQuMCJX!5e0!3m2!1ses!2sgt!4v1600000000000!5m2!1ses!2sgt"></iframe>
+                <iframe width="100%" height="100%" frameborder="0" style="border:0" loading="lazy"
+                    src="https://www.google.com/maps?q=San+Miguel+Petapa+Zona+7+Guatemala&output=embed"></iframe>
             </div>
 
             <div class="contact-grid">
                 <div>
                     <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Envíanos un mensaje</h3>
-                    <div class="form-group"><input type="text" placeholder="Nombre"></div>
-                    <div class="form-group"><input type="text" placeholder="Teléfono"></div>
-                    <div class="form-group"><input type="email" placeholder="Correo electrónico"></div>
-                    <div class="form-group"><textarea rows="4" placeholder="Escribe aquí tu mensaje"></textarea></div>
-                    <button class="btn" onclick="alert('¡Mensaje enviado con éxito!')">ENVIAR</button>
+                    <form id="form-contacto" name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                        <input type="hidden" name="form-name" value="contacto">
+                        <p style="display:none;"><label>No llenar: <input name="bot-field"></label></p>
+                        <div class="form-group"><input type="text" name="nombre" placeholder="Nombre" required></div>
+                        <div class="form-group"><input type="tel" name="telefono" placeholder="Teléfono" required></div>
+                        <div class="form-group"><input type="email" name="correo" placeholder="Correo electrónico" required></div>
+                        <div class="form-group"><textarea rows="4" name="mensaje" placeholder="Escribe aquí tu mensaje" required></textarea></div>
+                        <button type="submit" class="btn">ENVIAR</button>
+                        <p class="form-status" id="form-status"></p>
+                    </form>
                 </div>
                 <div>
                     <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">Contacto Guatemala</h3>
@@ -485,28 +284,40 @@
     <a href="https://wa.me/50247399246" class="whatsapp-float" target="_blank">💬 WhatsApp</a>
 
     <script>
-        let carrito = [];
+        let carrito = JSON.parse(localStorage.getItem('galex_carrito') || '[]');
         let total = 0;
+
+        function guardarCarrito() {
+            localStorage.setItem('galex_carrito', JSON.stringify(carrito));
+        }
 
         function agregarAlCarro(nombre, precio) {
             carrito.push({ nombre, precio });
+            guardarCarrito();
+            actualizarCarrito();
+        }
+
+        function eliminarDelCarro(index) {
+            carrito.splice(index, 1);
+            guardarCarrito();
             actualizarCarrito();
         }
 
         function actualizarCarrito() {
-            const lista = document.getElementById('lista-carrito');
+            const cont = document.getElementById('lista-carrito');
             const totalSpan = document.getElementById('total-carrito');
-            lista.innerHTML = '';
+            cont.innerHTML = '';
             total = 0;
 
             if (carrito.length === 0) {
-                lista.innerHTML = '<li>El carrito está vacío.</li>';
+                cont.innerHTML = '<p>El carrito está vacío.</p>';
             } else {
                 carrito.forEach((item, index) => {
                     total += item.precio;
-                    let li = document.createElement('li');
-                    li.textContent = `${item.nombre} - Q${item.precio}.00`;
-                    lista.appendChild(li);
+                    const div = document.createElement('div');
+                    div.className = 'cart-item';
+                    div.innerHTML = `<span>${item.nombre} - Q${item.precio}.00</span><button onclick="eliminarDelCarro(${index})">Quitar</button>`;
+                    cont.appendChild(div);
                 });
             }
             totalSpan.textContent = total.toFixed(2);
@@ -517,13 +328,32 @@
                 alert('Tu carrito está vacío.');
                 return;
             }
-            let mensaje = "¡Hola! Quiero realizar el siguiente pedido en Solution Galex:%0A";
+            let mensaje = "¡Hola! Quiero realizar el siguiente pedido en Solution Galex:\n";
             carrito.forEach(item => {
-                mensaje += `- ${item.nombre} (Q${item.precio}.00)%0A`;
+                mensaje += `- ${item.nombre} (Q${item.precio}.00)\n`;
             });
-            mensaje += `%0ATotal a pagar: Q${total.toFixed(2)}%0AMétodo de pago preferido: (Pago contra entrega / Transferencia bancaria)`;
-            window.open(`https://wa.me/50247399246?text=${mensaje}`, '_blank');
+            mensaje += `\nTotal a pagar: Q${total.toFixed(2)}\nMétodo de pago preferido: (Pago contra entrega / Transferencia bancaria)`;
+            window.open(`https://wa.me/50247399246?text=${encodeURIComponent(mensaje)}`, '_blank');
         }
+
+        actualizarCarrito();
+
+        const form = document.getElementById('form-contacto');
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            const status = document.getElementById('form-status');
+            const data = new FormData(form);
+            fetch('/', { method: 'POST', body: data })
+                .then(() => {
+                    status.textContent = '¡Mensaje enviado con éxito! Te contactaremos pronto.';
+                    status.style.color = 'green';
+                    form.reset();
+                })
+                .catch(() => {
+                    status.textContent = 'Hubo un error al enviar. Intenta de nuevo o escríbenos por WhatsApp.';
+                    status.style.color = 'red';
+                });
+        });
     </script>
 </body>
 </html>
